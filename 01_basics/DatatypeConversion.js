@@ -109,6 +109,40 @@ console.log(valueInNumber); // output is below depending on different values of 
 
 
         */
+
+/*  Heap Memory & Stack Meomory
+      Primitive Types:
+      1. Stored in stack.
+      2. Passed or assigned by value (call by value).
+      3. Changes to copies don't affect the original.
+
+      Reference Types:
+      1. Stored in heap; accessed via references (stored in stack).
+      2. Changing the value through another reference affects the original.
+
+*/
+
+
+let userName = "Sakshi"
+let anotherUser = userName
+anotherUser = "Sweety"
+
+console.log(userName)
+console.log(anotherUser)
+
+let oneObj = 
+{
+   userEmail : "abc@gmail.com"
+}
+let anotherObj = oneObj
+
+console.log(oneObj)
+console.log(anotherObj)
+
+anotherObj.userEmail = "xyz@gmail.com" //changes in one reflected in original copies.
+        
+console.log(oneObj)  
+console.log(anotherObj)
  
 
         
