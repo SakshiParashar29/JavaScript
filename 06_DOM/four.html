@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM || CHAI AUR CODE</title>
+</head>
+<body style="background-color: #212121; color: white;">
+    <ul class="language">
+        <li>JavaScript</li>
+    </ul>
+</body>
+<script>
+     function addLanguage(lname)
+     {
+        const li = document.createElement('li');
+        li.innerHTML = `${lname}`
+        document.querySelector('.language').appendChild(li);
+     }
+     addLanguage("python")
+
+     function addOptiLanguage(name)
+     {
+        const li = document.createElement('li');
+        li.appendChild(document.createTextNode(name));
+        document.querySelector('.language').appendChild(li)
+     }
+     addOptiLanguage('golang');
+     // In first fxn we have to travese till end to put the next li item but second fxn directly insert it at last
+
+     // EDIT
+     const child = document.querySelector("li:nth-child(2)");
+    //  child.innerText = "typescript";
+    const newLi = document.createElement('li')
+    newLi.textContent = "typeScript"
+    child.replaceWith(newLi)
+</script>
+</html>
