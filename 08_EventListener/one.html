@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events</title>
+</head>
+<body>
+    <!-- put some 3 to 4 images and then play with different events listener in js -->
+</body>
+<script>
+    // document.getElementById('owl').onclick = function()
+    // {
+    //     alert("Owl Clicked!!");
+    // }
+    // below is the best method among three. first is writing alert message in html code. onclick = "alert("owl clicked")"
+    // document.getElementById('owl').addEventListener('click', function(){
+    //     alert("Owl Clicked again!!");
+    // }, false) // default value is false, you can write it or not accordingly.
+
+
+    /*  STUDY ALL THE TOPICS THROUGHLY
+        type, timeStamp, defaultPrevented
+        target, toElement, srcElement, currentTarget,
+        clientX, clientY, screenX, screenY
+        altKey, ctrlkey, shiftkey,(can regonise by using eventlistener if it is clicked or not), keycode(using this we can make a project of testing typing speed and if user is typing correct or not)
+    */
+
+
+   /*  ABOUT EVENT PROPAGATION - Event propagation describes how events travel (or "propagate") through the DOM tree when they occur.
+
+      There are three phase : 1. Capturing Phase 2. Target Phase 3. Bubbling Phase
+      1. Capturing Phase - The event starts from the root of the DOM tree and travels down toward the target element. This phase is primarily used when you want to intercept the event before it reaches the target.
+
+      2. Target Phase - The event reaches the target element where it was triggered. Event listeners attached directly to the target element execute during this phase.
+
+      3. Bubbling Phase - After reaching the target, the event travels back up the DOM tree toward the root. Event listeners on ancestor elements of the target execute in this phase, in reverse order of nesting.
+       
+      capturing start from top to button and we have to write true for that and by default is bubbling phase.
+       
+      using stopPropagation we can step even to bubbled up further.
+   */
+</script>
+</html>
