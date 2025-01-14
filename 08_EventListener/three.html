@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Async in JS</title>
+</head>
+<body>
+     <h1>CHAI AUR CODE</h1>
+     <button class="stop">Stop</button>
+</body>
+<script>
+    // setTimeout(function(){
+    //     console.log('Sakshi'); // after two seconds in console it will print sakshi.
+    // }, 2000)
+
+    // const sayMyName = function() 
+    // {
+    //     console.log("Sakshi");
+    // }
+    // setTimeout(sayMyName, 2000); // another way of writing passing as reference.
+
+    const changeText = function(){
+       document.querySelector('h1').innerHTML = "Best JS course available on YouTube"
+    }
+
+    const changeME = setTimeout(changeText, 2000);
+
+    // if we want to stop the change the we can do so using clearTimeout
+    document.querySelector('.stop').addEventListener('click', function(){
+        clearTimeout(changeME);
+        const sentence = document.createTextNode("STOPPED");
+        document.body.appendChild(sentence);
+    })
+</script>
+</html>
